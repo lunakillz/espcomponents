@@ -330,6 +330,8 @@ bool UARTExComponent::publish_error(ValidateCode error_code)
         if (this->error_ && error_code_ != ERR_NONE) this->error_->publish_state("None");
         error = false;
         break;
+    case ERR_ACK:
+        break;
     }
     error_code_ = error_code;
     return error;
